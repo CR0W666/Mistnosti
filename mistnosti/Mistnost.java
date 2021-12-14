@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Mistnost {
-    String name;
+    final String name;
     boolean rozsviceno;
     List<Mistnost> sousedi;
-    Inventory loot;
+    final Inventory loot;
 
     public Mistnost(String name) {
         this.name = name;

@@ -1,6 +1,10 @@
 public class Item {
-    String name;
-    String lore;
+    final String name;
+    final String lore;
     
+    public Item(String name, String lore) {
+        this.name = name;
+        this.lore = lore;
+    }
 
 }

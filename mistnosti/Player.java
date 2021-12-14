@@ -1,6 +1,6 @@
 public class Player {
-    String name;
-    Inventory inventory = new Inventory();
+    final String name;
+    final Inventory inventory = new Inventory();
     Mistnost currentPosition;
     
 

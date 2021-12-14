@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.List;
 
 public class Dum {
-    public Map<String, Mistnost> layout = new HashMap<>();
+    public final Map<String, Mistnost> layout = new HashMap<>();
 
     public Dum() {
         initializeLayout();

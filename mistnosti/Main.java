@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
 class Main {
-    static Scanner sc = new Scanner(System.in);
-    static Dum dum = new Dum();
+    static final Scanner sc = new Scanner(System.in);
+    static final Dum dum = new Dum();
     static Player player;
     
     public static void main(String[] args) {
-        createPlayer();
+        player = createPlayer();
         
 
         while(chooseAction().equalsIgnoreCase("exit")) {
@@ -20,14 +20,13 @@ class Main {
     public static String chooseAction() {
 
         //todo
-        
+
         return "";
     }
 
-    public static void createPlayer() {
+    public static Player createPlayer() {
         System.out.println("Jak se jmenujes?");
-        this.player = new Player(sc.nextLine(), dum.layout.get("Obyvak"));
-
+        return new Player(sc.nextLine(), dum.layout.get("Obyvak"));
     }
 
     public static void exitHouse() {
