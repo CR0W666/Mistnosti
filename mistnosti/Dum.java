@@ -4,10 +4,11 @@ import java.util.Map;
 import java.util.List;
 
 public class Dum {
-    private Map<String, Mistnost> layout = new HashMap<>();
+    public Map<String, Mistnost> layout = new HashMap<>();
 
     public Dum() {
         initializeLayout();
+        initialiteLoot();
     }
 
     private void initializeLayout() {
@@ -55,9 +56,12 @@ public class Dum {
                 layout.get(LOZNICE)
             )
         );
+        
     }
 
-    public Map<String, Mistnost> getLayout() {
-        return this.layout;
+    private void initialiteLoot() {
+        //todo
     }
+
+
 }
