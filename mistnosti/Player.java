@@ -9,9 +9,13 @@ public class Player {
         this.currentPosition = currentPosition;
     }
 
+    public void move(Mistnost newPosition) {
+        this.currentPosition = newPosition;
+    }
+
 
     public boolean canLeave() {
-        return (inventory.getContents().get(new Item("Klic")) == 2);
+        return inventory.getItem(new Item("Klic")).amount == 2;
     }
 
 }

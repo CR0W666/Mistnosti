@@ -1,27 +1,47 @@
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Inventory {
-    private final Map<Item, Integer> contents = new HashMap<>();
+    private final List<Item> contents = new ArrayList<>();
     
 
     public void addItem(Item item) {
-        contents.put(item, contents.getOrDefault(item, 0) + 1);
+        boolean found = false;
+        
+        for (Item iItem : contents) {
+            if(iItem.name.equalsIgnoreCase(item.name)) {
+                iItem.amount++;
+                found = true;
+                break;
+            }
+        }
+
+        if(!found) contents.add(item);
     }
 
+
+
     public void removeItem(Item item) {
-        contents.computeIfPresent(item, (k, v) -> v-1);
+        for (Item iItem : contents) {
+            if(iItem.name.equalsIgnoreCase(item.name)) {
+                if(iItem.amount == 1) contents.remove(iItem);
+                else iItem.amount--;
+                break;
+            }
+        }
     }
 
     public Item getItem(Item item) {
-        if(contents.get(item) > 0 || contents.get(item) != null) {
-            removeItem(item);
-            return item;
-        } else return null;
+        for (Item iItem : contents) {
+            if(iItem.name.equalsIgnoreCase(item.name)) {
+                return iItem;
+            }
+        }
+        return new Item("null", "placeholder", -1);
     }
 
-    public Map<Item, Integer> getContents() {
-        return this.contents;
+    public List<Item> getContents() {
+        return contents;
     }
 }
