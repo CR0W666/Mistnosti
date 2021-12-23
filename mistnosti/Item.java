@@ -7,4 +7,9 @@ public class Item {
         this.lore = lore;
     }
 
+    public Item(String name) {
+        this.name = name;
+        this.lore = "";
+    }
+
 }

@@ -9,4 +9,9 @@ public class Player {
         this.currentPosition = currentPosition;
     }
 
+
+    public boolean canLeave() {
+        return (inventory.getContents().get(new Item("Klic")) == 2);
+    }
+
 }

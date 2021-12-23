@@ -17,7 +17,7 @@ public class Dum {
         final String KABINET = "Smajchl kabinet";
         final String KUCHYNE = "Kuchyne";
         final String PODKROVI = "Podkrovi";
-
+        
         layout.put(OBYVAK, new Mistnost(OBYVAK));
         layout.put(LOZNICE, new Mistnost(LOZNICE));
         layout.put(KABINET, new Mistnost(KABINET));

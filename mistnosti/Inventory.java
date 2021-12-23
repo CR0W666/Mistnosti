@@ -8,7 +8,6 @@ public class Inventory {
 
     public void addItem(Item item) {
         contents.put(item, contents.getOrDefault(item, 0) + 1);
-  
     }
 
     public void removeItem(Item item) {
@@ -20,5 +19,9 @@ public class Inventory {
             removeItem(item);
             return item;
         } else return null;
+    }
+
+    public Map<Item, Integer> getContents() {
+        return this.contents;
     }
 }
